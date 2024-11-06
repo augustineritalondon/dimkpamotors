@@ -76,7 +76,7 @@ export default function Home() {
 
   return (
     <div>
-      <div className=" bg-[url('/image.png')] bg-cover bg-center bg-no-repeat h-[100vh]">
+      <div className=" bg-[url('/image.png')] bg-cover bg-center bg-no-repeat h-[100vh] relative">
         <div className="bg-black/70 absolute inset-0 z-0"></div>
 
         <nav className="flex justify-between items-center p-4 z-[20] relative w-[90%] mx-auto">
