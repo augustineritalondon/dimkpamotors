@@ -142,7 +142,7 @@ export default function Home() {
               alt="logo"
               width={1000}
               height={1000}
-              className="w-20"
+              className="w-14 lg:w-20"
             />
           </div>
 
