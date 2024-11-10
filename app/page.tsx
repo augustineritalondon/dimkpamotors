@@ -176,9 +176,9 @@ export default function Home() {
         </nav>
 
         <div className="relative lg:absolute text-center lg:text-left lg:top-[40%] lg:left-[5%] py-64 lg:py-0">
-          <h1 className="text-black text-[48px] lg:text-[80px] font-bold">
+          <h1 className="text-white lg:text-black text-[48px] lg:text-[80px] font-bold">
             {/* Text shadow */}
-            <span className="absolute inset-0 text-white opacity-100 transform translate-x-1 translate-y-1">
+            <span className="hidden lg:block absolute inset-0 text-white opacity-100 transform translate-x-1 translate-y-1">
               Dimkpa Motors
             </span>
             {/* Actual text */}
