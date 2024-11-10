@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 import Image from "next/image";
-import { Call, DirectSend, Facebook, Instagram } from "iconsax-react";
+import { Call, DirectSend, Instagram } from "iconsax-react";
 import { Location } from "iconsax-react";
 // import useEmblaCarousel from "embla-carousel-react";
 // import { useEffect } from "react";
@@ -107,11 +107,11 @@ export default function Home() {
   //   if (!autoScroll) return;
   // }, [emblaApi]);
 
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [displayedImages, setDisplayedImages] = useState(images.slice(0, 6));
   const [loadMore, setLoadMore] = useState(true);
 
-  const openModal = (src) => {
+  const openModal = (src: string) => {
     setSelectedImage(src);
   };
 
