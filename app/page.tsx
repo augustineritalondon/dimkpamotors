@@ -176,10 +176,15 @@ export default function Home() {
         </nav>
 
         <div className="relative lg:absolute text-center lg:text-left lg:top-[40%] lg:left-[5%] py-64 lg:py-0">
-          <h1 className="text-white text-[48px] lg:text-[80px] font-bold">
+          <h1 className="text-black text-[48px] lg:text-[80px] font-bold">
+            {/* Text shadow */}
+            <span className="absolute inset-0 text-white opacity-100 transform translate-x-1 translate-y-1">
+              Dimkpa Motors
+            </span>
+            {/* Actual text */}
             Dimkpa Motors
           </h1>
-          <p className="text-[#FFDB7A] text-2xl">
+          <p className="text-[#FFDB7A] text-2xl ">
             We specialize in guaranteeing the protection of our clients and
             trusted customers.
           </p>
@@ -208,10 +213,10 @@ export default function Home() {
             />
           </div>
           <div className="lg:w-1/2 relative mt-5 lg:mt-0">
-            <h1 className="text-[38px] lg:text-[72px] font-black text-[#000] absolute -z-10 lg:-left-[140px] lg:-top-[48px] opacity-45 -mt-2 lg:mt-0">
-              DIMKPA MOTORS
+            <h1 className="text-[38px] lg:text-[72px] font-black text-[#000] absolute -z-10 lg:-left-[140px] lg:-top-[48px] opacity-5 -mt-2 lg:mt-0">
+              {/* DIMKPA MOTORS */}
             </h1>
-            <h1 className="text-[36px] font-bold text-[#AE042D]">About Us</h1>
+            <h1 className="text-[36px] font-black text-[#000]">About Us</h1>
             <p className=" text-xl mt-5">
               We are Dimkpa Motors, a company that specialize in Bullet-
               Resistant/Armoured Security Vehicle Nigeria. People and Companies
@@ -227,8 +232,8 @@ export default function Home() {
               experience within the industry allows us to provide efficient
               solutions for our customers.
             </p>
-            <button className="bg-[#AE042D] shadow-md text-white p-3 px-6 rounded-3xl mt-5 lg:mt-0 lg:absolute lg:bottom-0 font-bold">
-              Contact us
+            <button className="bg-[#FFBA49] shadow-md text-black p-3 px-6 rounded-3xl mt-5 lg:mt-0 lg:absolute lg:bottom-0 font-bold">
+              <a href="#footer">Contact us</a>
             </button>
           </div>
         </div>
@@ -294,7 +299,7 @@ export default function Home() {
             </svg>
 
             <div className="relative z-10">
-              <h1 className="text-[24px] font-bold mt-5 mb-2">
+              <h1 className="text-[24px] font-bold mt-5 mb-2 ">
                 Armoured Vehicles
               </h1>
               <p className="text-lg">
@@ -570,7 +575,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-16 lg:mt-[112px] w-[90%] mx-auto mb-[200px]">
+      <div className="mt-16 lg:mt-[112px] w-[90%] mx-auto ">
         <Image
           src="/11 1.png"
           className="w-full mx-auto"
@@ -580,7 +585,7 @@ export default function Home() {
         />
       </div>
 
-      <section id="gallery" className="embla relative w-[90%] mx-auto">
+      <section id="gallery" className="embla relative w-[90%] mx-auto ">
         <div className="absolute bottom-0 left-0 w-full">
           <Image
             src="/Group 86.png"
@@ -617,7 +622,7 @@ export default function Home() {
               <div className="flex justify-center my-4 mt-10">
                 <button
                   onClick={loadMoreImages}
-                  className="px-4 py-2 text-white bg-[#AE042D] rounded-3xl hover:bg-[#AE042D] font-bold  cursor-pointer relative z-[80]"
+                  className="px-4 py-2 text-black bg-[#FFBA49] rounded-3xl hover:bg-[#FFBA49] font-bold  cursor-pointer relative z-[80]"
                 >
                   Load More Images
                 </button>
@@ -661,18 +666,11 @@ export default function Home() {
         </div>
       </section>
 
-      <footer id="footer" className="bg-[url('/image.png')] relative">
-        <div className="bg-[#161e54e7] absolute inset-0 z-0"></div>
-
-        <div className="absolute -top-8 lg:-top-[140px] left-0 w-full">
-          <Image
-            src="/banner-bottom-blue-2 1.png"
-            className="w-full"
-            alt=""
-            width={1000}
-            height={1000}
-          />
-        </div>
+      <footer
+        id="footer"
+        className="bg-[url('/image.png')] relative pt-5 lg:pt-10 mt-16 lg:mt-32"
+      >
+        <div className="bg-[#000000e7] absolute inset-0 z-0"></div>
 
         <div className="relative z-10 lg:flex justify-around gap-10 w-[90%] mx-auto pt-5">
           <div className="lg:w-[25%] text-white my-5 lg:my-0">
