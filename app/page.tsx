@@ -1,78 +1,120 @@
 "use client";
 
+import { useState } from "react";
+
 import Image from "next/image";
-import useEmblaCarousel from "embla-carousel-react";
-import { useEffect } from "react";
-import AutoScroll from "embla-carousel-auto-scroll";
+// import useEmblaCarousel from "embla-carousel-react";
+// import { useEffect } from "react";
+// import AutoScroll from "embla-carousel-auto-scroll";
 
 export default function Home() {
-  const cards = [
-    {
-      id: 1,
-      image: `/1.png`,
-    },
-    {
-      id: 2,
-      image: `/2.png`,
-    },
-    {
-      id: 3,
-      image: `/r34.png`,
-    },
-    {
-      id: 4,
-      image: `/r43.png`,
-    },
-    {
-      id: 5,
-      image: `/WhatsApp Image 2021-12-01 at 12.22 1.png`,
-    },
-    {
-      id: 6,
-      image: `/image.png`,
-    },
-    {
-      id: 7,
-      image: `/1.png`,
-    },
-    {
-      id: 8,
-      image: `/2.png`,
-    },
-    {
-      id: 9,
-      image: `/2 1.png`,
-    },
+  const images = [
+    "/galleryImages/1.jpeg",
+    "/galleryImages/2.jpeg",
+    "/galleryImages/3.jpeg",
+    "/galleryImages/4.jpeg",
+    "/galleryImages/5.jpeg",
+    "/galleryImages/6.jpeg",
+    "/galleryImages/7.jpeg",
+    "/galleryImages/8.jpeg",
+    "/galleryImages/9.jpeg",
+    "/galleryImages/10.jpeg",
+    "/galleryImages/11.jpeg",
+    "/galleryImages/12.jpeg",
+    "/galleryImages/13.jpeg",
+    "/galleryImages/14.jpeg",
+    "/galleryImages/15.jpeg",
   ];
+  // const cards = [
+  //   {
+  //     id: 1,
+  //     image: `/1.png`,
+  //   },
+  //   {
+  //     id: 2,
+  //     image: `/2.png`,
+  //   },
+  //   {
+  //     id: 3,
+  //     image: `/r34.png`,
+  //   },
+  //   {
+  //     id: 4,
+  //     image: `/r43.png`,
+  //   },
+  //   {
+  //     id: 5,
+  //     image: `/WhatsApp Image 2021-12-01 at 12.22 1.png`,
+  //   },
+  //   {
+  //     id: 6,
+  //     image: `/image.png`,
+  //   },
+  //   {
+  //     id: 7,
+  //     image: `/1.png`,
+  //   },
+  //   {
+  //     id: 8,
+  //     image: `/2.png`,
+  //   },
+  //   {
+  //     id: 9,
+  //     image: `/2 1.png`,
+  //   },
+  // ];
 
-  const PartnerCard = ({ image, text }: { image: string; text: string }) => {
-    return (
-      <div className="flex h-full w-full items-center justify-center ">
-              
-        <Image
-          src={image}
-          alt={text}
-          width={2000}
-          height={640}
-          className="h-auto max-h-96 w-full rounded-xl object-contain"
-        />
-            
-      </div>
-    );
+  // const PartnerCard = ({ image, text }: { image: string; text: string }) => {
+  //   return (
+  //     <div className="flex h-full w-full items-center justify-center ">
+  //
+  //       <Image
+  //         src={image}
+  //         alt={text}
+  //         width={2000}
+  //         height={640}
+  //         className="h-auto max-h-96 w-full rounded-xl object-contain"
+  //       />
+  //
+  //     </div>
+  //   );
+  // };
+
+  // const [emblaRef, emblaApi] = useEmblaCarousel(
+  //   {
+  //     align: "start",
+  //     dragFree: true,
+  //     loop: true,
+  //   },
+  //   [AutoScroll({ playOnInit: true })]
+  // );
+  // useEffect(() => {
+  //   const autoScroll = emblaApi?.plugins()?.autoScroll;
+  //   if (!autoScroll) return;
+  // }, [emblaApi]);
+
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [displayedImages, setDisplayedImages] = useState(images.slice(0, 6));
+  const [loadMore, setLoadMore] = useState(true);
+
+  const openModal = (src) => {
+    setSelectedImage(src);
   };
 
-  const [emblaRef, emblaApi] = useEmblaCarousel(
-    {
-      align: "start",
-      dragFree: true,
-      loop: true,
-    },
-    [AutoScroll({ playOnInit: true })]
-  ); // const [isPlaying, setIsPlaying] = useState(true); // const onButtonAutoplayClick = useCallback( //   (callback: () => void) => { //     const autoScroll = emblaApi?.plugins()?.autoScroll; //     if (!autoScroll) return; //     const resetOrStop = //       autoScroll.options.stopOnInteraction === false //         ? autoScroll.reset //         : autoScroll.stop; //     resetOrStop(); //     callback(); //   }, //   [emblaApi], // ); // const toggleAutoplay = useCallback(() => { //   const autoScroll = emblaApi?.plugins()?.autoScroll; //   if (!autoScroll) return; //   const playOrStop = autoScroll.isPlaying() //     ? autoScroll.stop //     : autoScroll.play; //   playOrStop(); // }, [emblaApi]);
-  useEffect(() => {
-    const autoScroll = emblaApi?.plugins()?.autoScroll;
-    if (!autoScroll) return; // setIsPlaying(autoScroll.isPlaying()); // emblaApi //   .on("autoScroll:play", () => setIsPlaying(true)) //   .on("autoScroll:stop", () => setIsPlaying(false)) //   .on("reInit", () => setIsPlaying(autoScroll.isPlaying()));
-  }, [emblaApi]);
+  const closeModal = () => {
+    setSelectedImage(null);
+  };
+
+  const loadMoreImages = () => {
+    const nextImages = images.slice(
+      displayedImages.length,
+      displayedImages.length + 6
+    );
+    if (nextImages.length === 0) {
+      setLoadMore(false); // Disable load more button if there are no more images to load
+    }
+    setDisplayedImages((prev) => [...prev, ...nextImages]);
+  };
 
   return (
     <div>
@@ -472,7 +514,7 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="embla relative ">
+      <section className="embla relative w-[90%] mx-auto">
         <div className="absolute -top-8 lg:-top-20 left-0 w-full">
           <Image
             src="/banner-bottom.png"
@@ -495,8 +537,56 @@ export default function Home() {
           <h1 className="text-[38px] font-bold text-[#000] text-center">
             Gallery
           </h1>
-                       
-          <div className="embla__viewport" ref={emblaRef}>
+
+          <div className="mt-5">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+              {displayedImages.map((src, index) => (
+                <div
+                  key={index}
+                  className="overflow-hidden transition-transform transform hover:scale-105"
+                >
+                  <img
+                    src={src}
+                    alt={`Gallery Image ${index + 1}`}
+                    className="w-[200px] h-[200px] lg:w-[500px] lg:h-[500px] rounded-lg shadow-lg cursor-pointer"
+                    onClick={() => openModal(src)}
+                  />
+                </div>
+              ))}
+            </div>
+
+            {/* Load More Button */}
+            {loadMore && (
+              <div className="flex justify-center my-4">
+                <button
+                  onClick={loadMoreImages}
+                  className="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600 cursor-pointer relative z-[100]"
+                >
+                  Load More
+                </button>
+              </div>
+            )}
+
+            {selectedImage && (
+              <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
+                <div className="relative">
+                  <img
+                    src={selectedImage}
+                    alt="Selected"
+                    className="max-w-[700px] max-h-[700px] rounded shadow-lg"
+                  />
+                  <button
+                    onClick={closeModal}
+                    className="absolute top-2 right-2 text-white text-3xl"
+                  >
+                    &times;
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* <div className="embla__viewport" ref={emblaRef}>
                     
             <div className="embla__container">
                         
@@ -510,9 +600,8 @@ export default function Home() {
                       
             </div>
                            
-          </div>
+          </div> */}
         </div>
-                   
       </section>
 
       <div className="mt-16 lg:mt-[112px] w-[90%] mx-auto">
