@@ -24,6 +24,18 @@ export default function Home() {
     "/galleryImages/13.jpeg",
     "/galleryImages/14.jpeg",
     "/galleryImages/15.jpeg",
+    "/galleryImages/16.jpeg",
+    "/galleryImages/17.jpeg",
+    "/galleryImages/18.jpeg",
+    "/galleryImages/19.jpeg",
+    "/galleryImages/20.jpeg",
+    "/galleryImages/21.jpeg",
+    "/galleryImages/22.jpeg",
+    "/galleryImages/23.jpeg",
+    "/galleryImages/24.jpeg",
+    "/galleryImages/25.jpeg",
+    "/galleryImages/26.jpeg",
+    "/galleryImages/27.jpeg",
   ];
   // const cards = [
   //   {
@@ -124,22 +136,32 @@ export default function Home() {
         <nav className="flex justify-between items-center p-4 z-[20] relative w-[90%] mx-auto">
           <div>
             <Image
-              src="/Group 623.png"
+              src="/galleryImages/logo.png"
               alt="logo"
               width={1000}
               height={1000}
-              className="w-10"
+              className="w-20"
             />
           </div>
 
           <div className=" text-white">
             <ul className="flex gap-5">
               <li>Home</li>
-              <li className="hidden lg:block">About Us</li>
-              <li className="hidden lg:block">Ballistic</li>
-              <li className="hidden lg:block">Products</li>
-              <li className="hidden lg:block">Gallery</li>
-              <li className="hidden lg:block">Contact Us</li>
+              <li className="hidden lg:block">
+                <a href="#about">About Us</a>
+              </li>
+              <li className="hidden lg:block">
+                <a href="#services">Services</a>
+              </li>
+              {/* <li className="hidden lg:block">Products</li> */}
+              <li className="hidden lg:block">
+                {" "}
+                <a href="#gallery">Gallery</a>
+              </li>
+              <li className="hidden lg:block">
+                {" "}
+                <a href="#footer">Contact Us</a>
+              </li>
             </ul>
           </div>
         </nav>
@@ -165,11 +187,11 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-[90%] mx-auto relative my-[112px] ">
+      <div id="about" className="w-[90%] mx-auto relative my-[112px] ">
         <div className="lg:flex gap-10">
           <div className="lg:w-1/2 rounded-xl overflow-hidden">
             <Image
-              src="/2 1.png"
+              src="/galleryImages/5.jpeg"
               alt="car"
               width={1000}
               height={1000}
@@ -203,7 +225,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-[#d7f4f99b] mt-[150px] relative overflow-hidden py-20 pb-32">
+      <div
+        id="services"
+        className="bg-[#d7f4f99b] mt-[150px] relative overflow-hidden py-20 pb-32"
+      >
         <div>
           <Image
             src="/Group 85.png"
@@ -270,7 +295,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="absolute left-0 -bottom-16 ">
+            {/* <div className="absolute left-0 -bottom-16 ">
               <Image
                 src="/image 31.png"
                 alt="car"
@@ -278,7 +303,7 @@ export default function Home() {
                 height={1000}
                 className="w-[200px] opacity-100 relative z-0 "
               />
-            </div>
+            </div> */}
           </div>
           <div className="relative bg-white rounded-3xl p-5 shadow-[0px_1.85px_3.15px_#00000001,0px_8.15px_6.52px_#00000002,0px_20px_13px_#00000003,0px_38.52px_25.48px_#00000003,0px_64.81px_46.85px_#00000004,0px_100px_80px_#00000005] text-center lg:w-1/4 h-[350px] flex flex-col justify-center my-14 lg:my-0">
             <div className="absolute -bottom-6 -left-6 -z-10">
@@ -339,7 +364,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="absolute left-0 -bottom-16 ">
+            {/* <div className="absolute left-0 -bottom-16 ">
               <Image
                 src="/image 31.png"
                 alt="car"
@@ -347,7 +372,7 @@ export default function Home() {
                 height={1000}
                 className="w-[200px] opacity-100 relative z-0 "
               />
-            </div>
+            </div> */}
           </div>
           <div className="relative bg-white rounded-3xl p-5 shadow-[0px_1.85px_3.15px_#00000001,0px_8.15px_6.52px_#00000002,0px_20px_13px_#00000003,0px_38.52px_25.48px_#00000003,0px_64.81px_46.85px_#00000004,0px_100px_80px_#00000005] text-center lg:w-1/4 h-[350px] flex flex-col justify-center my-14 lg:my-0">
             <svg
@@ -393,7 +418,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="absolute left-0 -bottom-16 ">
+            {/* <div className="absolute left-0 -bottom-16 ">
               <Image
                 src="/image 31.png"
                 alt="car"
@@ -401,7 +426,7 @@ export default function Home() {
                 height={1000}
                 className="w-[200px] opacity-100 relative z-0 "
               />
-            </div>
+            </div> */}
           </div>
           <div className="relative bg-white rounded-3xl p-5 shadow-[0px_1.85px_3.15px_#00000001,0px_8.15px_6.52px_#00000002,0px_20px_13px_#00000003,0px_38.52px_25.48px_#00000003,0px_64.81px_46.85px_#00000004,0px_100px_80px_#00000005] text-center lg:w-1/4 h-[350px] flex flex-col justify-center my-14 lg:my-0">
             <svg
@@ -447,7 +472,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="absolute left-0 -bottom-16 ">
+            {/* <div className="absolute left-0 -bottom-16 ">
               <Image
                 src="/image 31.png"
                 alt="car"
@@ -455,7 +480,7 @@ export default function Home() {
                 height={1000}
                 className="w-[200px] opacity-100 relative z-0 "
               />
-            </div>
+            </div> */}
           </div>
           <div className="relative bg-white rounded-3xl p-5 shadow-[0px_1.85px_3.15px_#00000001,0px_8.15px_6.52px_#00000002,0px_20px_13px_#00000003,0px_38.52px_25.48px_#00000003,0px_64.81px_46.85px_#00000004,0px_100px_80px_#00000005] text-center lg:w-1/4 h-[350px] flex flex-col justify-center my-14 lg:my-0">
             <svg
@@ -501,7 +526,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="absolute left-0 -bottom-16 ">
+            {/* <div className="absolute left-0 -bottom-16 ">
               <Image
                 src="/image 31.png"
                 alt="car"
@@ -509,12 +534,12 @@ export default function Home() {
                 height={1000}
                 className="w-[200px] opacity-100 relative z-0 "
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
 
-      <section className="embla relative w-[90%] mx-auto">
+      <section id="gallery" className="embla relative w-[90%] mx-auto">
         <div className="absolute -top-8 lg:-top-20 left-0 w-full">
           <Image
             src="/banner-bottom.png"
@@ -557,23 +582,23 @@ export default function Home() {
 
             {/* Load More Button */}
             {loadMore && (
-              <div className="flex justify-center my-4">
+              <div className="flex justify-center my-4 mt-10">
                 <button
                   onClick={loadMoreImages}
-                  className="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600 cursor-pointer relative z-[100]"
+                  className="px-4 py-2 text-white bg-[#AE042D] rounded-3xl hover:bg-[#AE042D] font-bold  cursor-pointer relative z-[80]"
                 >
-                  Load More
+                  Load More Images
                 </button>
               </div>
             )}
 
             {selectedImage && (
-              <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
+              <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-[200]">
                 <div className="relative">
                   <img
                     src={selectedImage}
                     alt="Selected"
-                    className="max-w-[700px] max-h-[700px] rounded shadow-lg"
+                    className="w-[300px] h-[400px] lg:max-w-[700px] lg:max-h-[700px] rounded shadow-lg"
                   />
                   <button
                     onClick={closeModal}
@@ -624,7 +649,7 @@ export default function Home() {
         />
       </div>
 
-      <footer className="bg-[url('/image.png')] relative">
+      <footer id="footer" className="bg-[url('/image.png')] relative">
         <div className="bg-[#161e54e7] absolute inset-0 z-0"></div>
 
         <div className="absolute -top-8 lg:-top-[140px] left-0 w-full">
