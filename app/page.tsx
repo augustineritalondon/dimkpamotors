@@ -132,7 +132,10 @@ export default function Home() {
 
   return (
     <div>
-      <div className=" bg-[url('/image.png')] bg-cover bg-center bg-no-repeat h-[100vh] relative">
+      <div
+        id="home"
+        className=" bg-[url('/image.png')] bg-cover bg-center bg-no-repeat h-[100vh] relative"
+      >
         <div className="bg-black/70 absolute inset-0 z-0"></div>
 
         <nav className="flex justify-between items-center p-4 z-[20] relative w-[90%] mx-auto">
@@ -148,14 +151,18 @@ export default function Home() {
 
           <div className=" text-white">
             <ul className="flex gap-5">
-              <li>Home</li>
+              <li>
+                <a href="#home">Home</a>
+              </li>
               <li className="hidden lg:block">
                 <a href="#about">About Us</a>
               </li>
               <li className="hidden lg:block">
                 <a href="#services">Services</a>
               </li>
-              {/* <li className="hidden lg:block">Products</li> */}
+              <li className="hidden lg:block">
+                <a href="#ballistic">Ballistic Level</a>
+              </li>
               <li className="hidden lg:block">
                 {" "}
                 <a href="#gallery">Gallery</a>
@@ -193,7 +200,7 @@ export default function Home() {
         <div className="lg:flex gap-10">
           <div className="lg:w-1/2 rounded-xl overflow-hidden">
             <Image
-              src="/galleryImages/5.jpeg"
+              src="/galleryImages/about us.jpg"
               alt="car"
               width={1000}
               height={1000}
@@ -280,8 +287,8 @@ export default function Home() {
                   y2="66.6551"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#747DEF" />
-                  <stop offset="1" stop-color="#5E3BE1" />
+                  <stop stop-color="#000" />
+                  <stop offset="1" stop-color="#000" />
                 </linearGradient>
               </defs>
             </svg>
@@ -350,8 +357,8 @@ export default function Home() {
                   y2="66.6551"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#E4F3FF" />
-                  <stop offset="1" stop-color="#3BC3E1" />
+                  <stop stop-color="#000" />
+                  <stop offset="1" stop-color="#000" />
                 </linearGradient>
               </defs>
             </svg>
@@ -404,8 +411,8 @@ export default function Home() {
                   y2="66.6551"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#79BD9A" />
-                  <stop offset="1" stop-color="#3BE1A5" />
+                  <stop stop-color="#000" />
+                  <stop offset="1" stop-color="#000" />
                 </linearGradient>
               </defs>
             </svg>
@@ -458,8 +465,8 @@ export default function Home() {
                   y2="66.6551"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#0D486E" />
-                  <stop offset="1" stop-color="#3B91E1" />
+                  <stop stop-color="#000" />
+                  <stop offset="1" stop-color="#000" />
                 </linearGradient>
               </defs>
             </svg>
@@ -512,8 +519,8 @@ export default function Home() {
                   y2="66.6551"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#CEE39E" />
-                  <stop offset="1" stop-color="#ACE13B" />
+                  <stop stop-color="#000" />
+                  <stop offset="1" stop-color="#000" />
                 </linearGradient>
               </defs>
             </svg>
@@ -541,8 +548,8 @@ export default function Home() {
         </div>
       </div>
 
-      <section id="gallery" className="embla relative w-[90%] mx-auto">
-        <div className="absolute -top-8 lg:-top-20 left-0 w-full">
+      <div id="ballistic" className=" relative ">
+        <div className="absolute -top-10 lg:-top-20 left-0 w-full">
           <Image
             src="/banner-bottom.png"
             alt="logo"
@@ -551,6 +558,29 @@ export default function Home() {
             className="w-full"
           />
         </div>
+
+        <div className="pt-10">
+          <Image
+            src="/WhatsApp Image 2021-11-22 at 11.33 1 (1).png"
+            className="w-[971px] h-[482px] mx-auto"
+            alt="logo"
+            width={1000}
+            height={1000}
+          />
+        </div>
+      </div>
+
+      <div className="mt-16 lg:mt-[112px] w-[90%] mx-auto mb-[200px]">
+        <Image
+          src="/11 1.png"
+          className="w-full mx-auto"
+          alt="logo"
+          width={1000}
+          height={1000}
+        />
+      </div>
+
+      <section id="gallery" className="embla relative w-[90%] mx-auto">
         <div className="absolute bottom-0 left-0 w-full">
           <Image
             src="/Group 86.png"
@@ -631,26 +661,6 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="mt-16 lg:mt-[112px] w-[90%] mx-auto">
-        <Image
-          src="/WhatsApp Image 2021-11-22 at 11.33 1 (1).png"
-          className="w-[971px] h-[482px] mx-auto"
-          alt="logo"
-          width={1000}
-          height={1000}
-        />
-      </div>
-
-      <div className="mt-16 lg:mt-[112px] w-[90%] mx-auto mb-[200px]">
-        <Image
-          src="/11 1.png"
-          className="w-full mx-auto"
-          alt="logo"
-          width={1000}
-          height={1000}
-        />
-      </div>
-
       <footer id="footer" className="bg-[url('/image.png')] relative">
         <div className="bg-[#161e54e7] absolute inset-0 z-0"></div>
 
@@ -669,7 +679,7 @@ export default function Home() {
             <h1 className="font-bold text-2xl text-[#FFBA49]">Dimkpa Motors</h1>
             <p className="mt-5">
               We are a company that specialize in Bullet-Resistant/Armoured
-              Security Vehicle in Niger. With our global broad network of
+              Security Vehicle in Nigeria. With our global broad network of
               partners, suppliers and vendors, cutting edge technology platforms
               and in-depth market experise we are commited to delivering
               cost-effective and custom tailored solutions to respond to
@@ -680,12 +690,14 @@ export default function Home() {
           <div className="lg:w-[30%]] text-white my-5 lg:my-0">
             <h1></h1>
             <ul>
-              <li className="text-lg font-medium cursor-pointer my-5">Home</li>
               <li className="text-lg font-medium cursor-pointer my-5">
-                About Us
+                <a href="#home">Home</a>
               </li>
               <li className="text-lg font-medium cursor-pointer my-5">
-                Services
+                <a href="#about">About Us</a>
+              </li>
+              <li className="text-lg font-medium cursor-pointer my-5">
+                <a href="#services">Services</a>
               </li>
               <li className="text-lg font-medium cursor-pointer my-5"></li>
             </ul>
@@ -710,7 +722,7 @@ export default function Home() {
               </li>
               <li className="my-2 text-lg flex items-center gap-3">
                 <DirectSend size="25" color="#fff" />
-                <p>dimkpamotorsltd@gmail.com</p>
+                <p>dimkpa@dimkpamotors.com</p>
               </li>
               <li className="my-2 text-lg flex items-center gap-3">
                 <Location size="25" color="#fff" />
