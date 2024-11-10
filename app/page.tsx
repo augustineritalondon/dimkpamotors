@@ -3,6 +3,8 @@
 import { useState } from "react";
 
 import Image from "next/image";
+import { Call, DirectSend, Facebook, Instagram } from "iconsax-react";
+import { Location } from "iconsax-react";
 // import useEmblaCarousel from "embla-carousel-react";
 // import { useEffect } from "react";
 // import AutoScroll from "embla-carousel-auto-scroll";
@@ -701,14 +703,43 @@ export default function Home() {
           <div className="lg:w-[20%] text-white my-5 lg:my-0">
             <h1 className="font-bold text-2xl text-[#FFBA49]">Contact Us</h1>
             <ul>
-              <li className="my-2 text-lg">phone</li>
-              <li className="my-2 text-lg">email</li>
-              <li className="my-2 text-lg">locatoin</li>
+              <li className="my-2 text-lg flex items-center gap-3">
+                <Call size="25" color="#fff" />
+
+                <p>+234 814 134 6361</p>
+              </li>
+              <li className="my-2 text-lg flex items-center gap-3">
+                <DirectSend size="25" color="#fff" />
+                <p>dimkpamotorsltd@gmail.com</p>
+              </li>
+              <li className="my-2 text-lg flex items-center gap-3">
+                <Location size="25" color="#fff" />
+                <p>Lagos, Nigeria</p>
+              </li>
               <div>
-                <ul className="flex">
-                  <li className="mr-3">face</li>
-                  <li className="mr-3">face</li>
-                  <li className="mr-3">face</li>
+                <ul className="flex mt-5">
+                  <li className="mr-3 cursor-pointer">
+                    <a
+                      href="https://www.instagram.com/dimkpa_motors/profilecard/?igsh=MW14aHZ3Mmh4ZjBsdA=="
+                      target="_blank"
+                    >
+                      <Instagram size="25" color="#fff" />
+                    </a>
+                  </li>
+                  <li className="mr-3 cursor-pointer">
+                    <a
+                      href="https://www.tiktok.com/@dimkpamotors?_r=1&_d=egab46dbbd8c1m&sec_uid=MS4wLjABAAAAurqnaPwocBMELTLvQUAm_GDhIl1kdYuBIAvEMjSy-L922DQ_8R3zOrbkR9_n972W&share_author_id=7004940129823671301&sharer_language=en&source=h5_m&u_code=dkek3l652c6i9i&timestamp=1731100709&user_id=7004940129823671301&sec_user_id=MS4wLjABAAAAurqnaPwocBMELTLvQUAm_GDhIl1kdYuBIAvEMjSy-L922DQ_8R3zOrbkR9_n972W&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7435011355515782967&share_link_id=432b8761-9acc-4680-927a-dcc52d67bbfb&share_app_id=1233&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb0229&social_share_type=5&enable_checksum=1"
+                      target="_blank"
+                    >
+                      <img
+                        width="25"
+                        height="25"
+                        src="https://img.icons8.com/ffffff/ios-glyphs/30/tiktok.png"
+                        alt="tiktok"
+                      />
+                    </a>
+                  </li>
+                  {/* <li className="mr-3">face</li> */}
                 </ul>
               </div>
             </ul>
